@@ -68,8 +68,9 @@ extension LoginViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is FeedViewController {
-            let feed = segue.destination as! FeedViewController
+        if segue.destination is UINavigationController {
+            let navVC = segue.destination as! UINavigationController
+            let feed = navVC.viewControllers[0] as! FeedViewController
             feed.logged_in_user = currUsername
         }
     }

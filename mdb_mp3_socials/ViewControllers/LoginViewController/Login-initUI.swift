@@ -16,7 +16,14 @@ extension LoginViewController {
         init_textfield()
         init_buttons()
         
+        automatic_login_fields()
+        
         Utils.addBackgroundImage(given_view: view)
+    }
+    
+    func automatic_login_fields() {
+        username_field.text = "A"
+        password_field.text = "password123"
     }
     
     func init_img() {
