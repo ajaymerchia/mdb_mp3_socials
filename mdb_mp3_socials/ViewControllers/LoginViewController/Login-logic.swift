@@ -60,7 +60,8 @@ extension LoginViewController {
         performSegue(withIdentifier: "login2signup", sender: self)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
+        debugPrint("Called")
         if currUsername != nil {
             performSegue(withIdentifier: "login2feed", sender: self)
         }

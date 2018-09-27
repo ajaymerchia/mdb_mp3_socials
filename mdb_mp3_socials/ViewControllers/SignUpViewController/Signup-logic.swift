@@ -50,7 +50,7 @@ extension SignUpViewController {
                 self.displayAlert(title: "There was an error", message: "Trying to make you")
                 return
             } else {
-                guard let uid = user?.user.uid else {
+                guard (user?.user.uid) != nil else {
                     return
                 }
                 let ref = Database.database().reference()
@@ -64,7 +64,7 @@ extension SignUpViewController {
                     } else {
                         self.currUsername = username
                         debugPrint("Ready to move on")
-                        let origin = self.parent as? LoginViewController
+                        let origin = self.presentingViewController as? LoginViewController
                         origin?.currUsername = self.currUsername
                         
                         self.dismiss(animated: true, completion: {})

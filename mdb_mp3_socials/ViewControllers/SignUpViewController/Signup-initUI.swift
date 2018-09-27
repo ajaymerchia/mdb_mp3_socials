@@ -14,8 +14,29 @@ extension SignUpViewController {
     func initUI() {
         init_textfield()
         init_buttons()
+        initnav()
         
         Utils.addBackgroundImage(given_view: view)
+    }
+    
+    func initnav() {
+        let navbar = UINavigationBar(frame: CGRect(x: 0, y: Utils.PADDING, width: view.frame.width, height: 50));
+        navbar.tintColor = UIColor.white
+        navbar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navbar.shadowImage = UIImage()
+        navbar.isTranslucent = true
+
+        self.view.addSubview(navbar)
+        
+        let navItem = UINavigationItem(title: "")
+        let navBarbutton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.stop, target: self, action: #selector(go_back))
+        navItem.leftBarButtonItem = navBarbutton
+        
+        navbar.items = [navItem]
+    }
+    
+    @objc func go_back() {
+        self.dismiss(animated: true, completion: {})
     }
     
     
