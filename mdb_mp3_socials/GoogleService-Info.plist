@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>876604319877-4131lhq9jik32497ei39jg2n3v31pimd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.876604319877-4131lhq9jik32497ei39jg2n3v31pimd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCIb5bL4RZuLRMm0nf8a69u2Y12iQQWwfw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>876604319877</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>mdb-iostraining.mdb-mp3-socials</string>
+	<key>PROJECT_ID</key>
+	<string>mdb-mp3-socials</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mdb-mp3-socials.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:876604319877:ios:e6ed8ba4a9e0f03e</string>
+	<key>DATABASE_URL</key>
+	<string>https://mdb-mp3-socials.firebaseio.com</string>
+</dict>
+</plist>
