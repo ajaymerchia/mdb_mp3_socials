@@ -29,5 +29,24 @@ class Utils {
             print("Family: \(family) Font names: \(names)")
         }
     }
+    
+    
 }
 
+extension String
+{
+    func toDateTime() -> Date
+    {
+        //Create Date Formatter
+        let dateFormatter = DateFormatter()
+        
+        //Specify Format of String to Parse
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss xxx"
+        
+        //Parse into NSDate
+        let dateFromString : Date = dateFormatter.date(from: self)!
+        
+        //Return Parsed Date
+        return dateFromString
+    }
+}

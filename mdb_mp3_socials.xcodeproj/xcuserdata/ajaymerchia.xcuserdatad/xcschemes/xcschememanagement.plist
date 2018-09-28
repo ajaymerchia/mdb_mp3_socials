@@ -7,7 +7,25 @@
 		<key>mdb_mp3_socials.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>11</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>B7DB94B1215CD79A0048AE49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7DB94C5215CD79B0048AE49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7DB94D0215CD79B0048AE49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

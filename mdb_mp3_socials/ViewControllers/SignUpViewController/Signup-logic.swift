@@ -59,7 +59,6 @@ extension SignUpViewController {
                 
                 userRef.updateChildValues(values, withCompletionBlock: { (error, ref) in
                     if error != nil {
-                        print(error)
                         return
                     } else {
                         self.currUsername = username

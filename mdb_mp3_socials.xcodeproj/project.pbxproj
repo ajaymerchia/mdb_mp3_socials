@@ -28,7 +28,14 @@
 		B7CD48F1215CED5200DB594C /* Signup-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48F0215CED5200DB594C /* Signup-initUI.swift */; };
 		B7CD48F3215CEE4100DB594C /* Login-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48F2215CEE4100DB594C /* Login-logic.swift */; };
 		B7CD48F5215CF33500DB594C /* Signup-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48F4215CF33500DB594C /* Signup-logic.swift */; };
-		B7CD48F7215CF9A300DB594C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48F6215CF9A300DB594C /* FeedViewController.swift */; };
+		B7CD48F7215CF9A300DB594C /* Feed-main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48F6215CF9A300DB594C /* Feed-main.swift */; };
+		B7CD48FA215D537600DB594C /* AccountNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48F9215D537600DB594C /* AccountNavController.swift */; };
+		B7CD48FD215D551400DB594C /* Feed-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48FC215D551400DB594C /* Feed-initUI.swift */; };
+		B7CD4904215D580400DB594C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD4903215D580400DB594C /* DetailViewController.swift */; };
+		B7CD4907215D5ABE00DB594C /* NewSocial-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD4906215D5ABE00DB594C /* NewSocial-initUI.swift */; };
+		B7CD4909215D614400DB594C /* NewSocial-textview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD4908215D614400DB594C /* NewSocial-textview.swift */; };
+		B7CD490D215D64C500DB594C /* NewSocial-imagepicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD490C215D64C500DB594C /* NewSocial-imagepicker.swift */; };
+		B7CD490F215D656600DB594C /* NewSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD490E215D656600DB594C /* NewSocialViewController.swift */; };
 		B7DB94B6215CD79A0048AE49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DB94B5215CD79A0048AE49 /* AppDelegate.swift */; };
 		B7DB94BB215CD79A0048AE49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DB94B9215CD79A0048AE49 /* Main.storyboard */; };
 		B7DB94BD215CD79B0048AE49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7DB94BC215CD79B0048AE49 /* Assets.xcassets */; };
@@ -36,6 +43,8 @@
 		B7DB94CB215CD79B0048AE49 /* mdb_mp3_socialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DB94CA215CD79B0048AE49 /* mdb_mp3_socialsTests.swift */; };
 		B7DB94D6215CD79B0048AE49 /* mdb_mp3_socialsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DB94D5215CD79B0048AE49 /* mdb_mp3_socialsUITests.swift */; };
 		B7DB94E4215CD84D0048AE49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7DB94E3215CD84D0048AE49 /* GoogleService-Info.plist */; };
+		B7FDED74215DA56E0083CF29 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FDED73215DA56E0083CF29 /* Event.swift */; };
+		B7FDED76215DC0480083CF29 /* NewSocial-EventCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FDED75215DC0480083CF29 /* NewSocial-EventCreate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +89,14 @@
 		B7CD48F0215CED5200DB594C /* Signup-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Signup-initUI.swift"; sourceTree = "<group>"; };
 		B7CD48F2215CEE4100DB594C /* Login-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-logic.swift"; sourceTree = "<group>"; };
 		B7CD48F4215CF33500DB594C /* Signup-logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Signup-logic.swift"; sourceTree = "<group>"; };
-		B7CD48F6215CF9A300DB594C /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		B7CD48F6215CF9A300DB594C /* Feed-main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Feed-main.swift"; sourceTree = "<group>"; };
+		B7CD48F9215D537600DB594C /* AccountNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNavController.swift; sourceTree = "<group>"; };
+		B7CD48FC215D551400DB594C /* Feed-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Feed-initUI.swift"; sourceTree = "<group>"; };
+		B7CD4903215D580400DB594C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B7CD4906215D5ABE00DB594C /* NewSocial-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewSocial-initUI.swift"; sourceTree = "<group>"; };
+		B7CD4908215D614400DB594C /* NewSocial-textview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewSocial-textview.swift"; sourceTree = "<group>"; };
+		B7CD490C215D64C500DB594C /* NewSocial-imagepicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NewSocial-imagepicker.swift"; path = "/Users/ajaymerchia/wkspc/mdb/iostraining/mdb_mp3_socials/mdb_mp3_socials/ViewControllers/NewSocialViewController/NewSocial-imagepicker.swift"; sourceTree = "<absolute>"; };
+		B7CD490E215D656600DB594C /* NewSocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSocialViewController.swift; sourceTree = "<group>"; };
 		B7DB94B2215CD79A0048AE49 /* mdb_mp3_socials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mdb_mp3_socials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7DB94B5215CD79A0048AE49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7DB94BA215CD79A0048AE49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +110,8 @@
 		B7DB94D5215CD79B0048AE49 /* mdb_mp3_socialsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mdb_mp3_socialsUITests.swift; sourceTree = "<group>"; };
 		B7DB94D7215CD79B0048AE49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7DB94E3215CD84D0048AE49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B7FDED73215DA56E0083CF29 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B7FDED75215DC0480083CF29 /* NewSocial-EventCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewSocial-EventCreate.swift"; sourceTree = "<group>"; };
 		DF4E255C4475DECC41D1E6D3 /* Pods-mdb_mp3_socials.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdb_mp3_socials.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mdb_mp3_socials/Pods-mdb_mp3_socials.debug.xcconfig"; sourceTree = "<group>"; };
 		F2B57099BC3C9BC48D66C0AA /* Pods_mdb_mp3_socialsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mdb_mp3_socialsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9B33AF29CA6B320E1BC535 /* Pods-mdb_mp3_socialsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdb_mp3_socialsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mdb_mp3_socialsUITests/Pods-mdb_mp3_socialsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,9 +161,12 @@
 		B7CD48C9215CDA9B00DB594C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B7CD48F8215CF9AA00DB594C /* FeedViewController */,
-				B7CD48CA215CDAA500DB594C /* LoginViewController */,
 				B7CD48EB215CECF300DB594C /* SignUpViewController */,
+				B7CD48CA215CDAA500DB594C /* LoginViewController */,
+				B7CD48FB215D537E00DB594C /* AccountNavController */,
+				B7CD48F8215CF9AA00DB594C /* FeedViewController */,
+				B7CD4902215D56FE00DB594C /* NewSocialViewController */,
+				B7CD4905215D580800DB594C /* DetailViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -163,6 +184,8 @@
 		B7CD48CF215CE13D00DB594C /* rsrc */ = {
 			isa = PBXGroup;
 			children = (
+				B7CD48CD215CDDF300DB594C /* utils.swift */,
+				B7CD48E5215CE4E200DB594C /* rgba.swift */,
 				B7CD48D0215CE14300DB594C /* FontGenerator */,
 			);
 			path = rsrc;
@@ -198,9 +221,38 @@
 		B7CD48F8215CF9AA00DB594C /* FeedViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B7CD48F6215CF9A300DB594C /* FeedViewController.swift */,
+				B7CD48F6215CF9A300DB594C /* Feed-main.swift */,
+				B7CD48FC215D551400DB594C /* Feed-initUI.swift */,
 			);
 			path = FeedViewController;
+			sourceTree = "<group>";
+		};
+		B7CD48FB215D537E00DB594C /* AccountNavController */ = {
+			isa = PBXGroup;
+			children = (
+				B7CD48F9215D537600DB594C /* AccountNavController.swift */,
+			);
+			path = AccountNavController;
+			sourceTree = "<group>";
+		};
+		B7CD4902215D56FE00DB594C /* NewSocialViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B7CD490E215D656600DB594C /* NewSocialViewController.swift */,
+				B7CD4906215D5ABE00DB594C /* NewSocial-initUI.swift */,
+				B7CD490C215D64C500DB594C /* NewSocial-imagepicker.swift */,
+				B7CD4908215D614400DB594C /* NewSocial-textview.swift */,
+				B7FDED75215DC0480083CF29 /* NewSocial-EventCreate.swift */,
+			);
+			path = NewSocialViewController;
+			sourceTree = "<group>";
+		};
+		B7CD4905215D580800DB594C /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B7CD4903215D580400DB594C /* DetailViewController.swift */,
+			);
+			path = DetailViewController;
 			sourceTree = "<group>";
 		};
 		B7DB94A9215CD79A0048AE49 = {
@@ -229,9 +281,8 @@
 			isa = PBXGroup;
 			children = (
 				B7DB94B5215CD79A0048AE49 /* AppDelegate.swift */,
-				B7CD48CD215CDDF300DB594C /* utils.swift */,
-				B7CD48E5215CE4E200DB594C /* rgba.swift */,
 				B7CD48CF215CE13D00DB594C /* rsrc */,
+				B7FDED72215DA54B0083CF29 /* Models */,
 				B7CD48C9215CDA9B00DB594C /* ViewControllers */,
 				B7DB94B9215CD79A0048AE49 /* Main.storyboard */,
 				B7DB94BC215CD79B0048AE49 /* Assets.xcassets */,
@@ -258,6 +309,14 @@
 				B7DB94D7215CD79B0048AE49 /* Info.plist */,
 			);
 			path = mdb_mp3_socialsUITests;
+			sourceTree = "<group>";
+		};
+		B7FDED72215DA54B0083CF29 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7FDED73215DA56E0083CF29 /* Event.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E0FF0D9A510467913D8F4D7D /* Frameworks */ = {
@@ -516,15 +575,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7CD48F3215CEE4100DB594C /* Login-logic.swift in Sources */,
+				B7CD4907215D5ABE00DB594C /* NewSocial-initUI.swift in Sources */,
 				B7CD48EF215CED4600DB594C /* Signup-main.swift in Sources */,
-				B7CD48F7215CF9A300DB594C /* FeedViewController.swift in Sources */,
+				B7CD48F7215CF9A300DB594C /* Feed-main.swift in Sources */,
+				B7CD490D215D64C500DB594C /* NewSocial-imagepicker.swift in Sources */,
+				B7CD48FD215D551400DB594C /* Feed-initUI.swift in Sources */,
+				B7CD4909215D614400DB594C /* NewSocial-textview.swift in Sources */,
 				B7CD48CC215CDB4000DB594C /* Login-initUI.swift in Sources */,
+				B7CD48FA215D537600DB594C /* AccountNavController.swift in Sources */,
 				B7CD48C8215CDA6E00DB594C /* Login-main.swift in Sources */,
+				B7FDED74215DA56E0083CF29 /* Event.swift in Sources */,
 				B7CD48E6215CE4E200DB594C /* rgba.swift in Sources */,
 				B7DB94B6215CD79A0048AE49 /* AppDelegate.swift in Sources */,
 				B7CD48F1215CED5200DB594C /* Signup-initUI.swift in Sources */,
+				B7CD490F215D656600DB594C /* NewSocialViewController.swift in Sources */,
 				B7CD48F5215CF33500DB594C /* Signup-logic.swift in Sources */,
 				B7CD48CE215CDDF300DB594C /* utils.swift in Sources */,
+				B7FDED76215DC0480083CF29 /* NewSocial-EventCreate.swift in Sources */,
+				B7CD4904215D580400DB594C /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +771,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9T3JS4TFUB;
 				INFOPLIST_FILE = mdb_mp3_socials/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -722,6 +791,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9T3JS4TFUB;
 				INFOPLIST_FILE = mdb_mp3_socials/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

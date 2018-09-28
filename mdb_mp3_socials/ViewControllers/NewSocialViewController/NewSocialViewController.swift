@@ -1,24 +1,25 @@
 //
-//  FeedViewController.swift
-//  mdb_mp3_socials
+//  NewSocialViewController.swift
+//  
 //
 //  Created by Ajay Raj Merchia on 9/27/18.
-//  Copyright © 2018 Ajay Raj Merchia. All rights reserved.
 //
 
 import UIKit
-import ChameleonFramework
 
-class FeedViewController: UIViewController {
+class NewSocialViewController: UIViewController {
 
-    var logged_in_user:String!
+    var eventNameField: UITextField!
+    var eventDescField: UITextView!
+    var eventDateField: UIDatePicker!
+    var eventImgPicker: UIButton!
+    var eventImageView: UIImageView!
+    
+    var createEvent: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.flatRed
-        
-        debugPrint("view for " + logged_in_user)
-
+        initUI()
         // Do any additional setup after loading the view.
     }
     
