@@ -11,13 +11,24 @@ import ChameleonFramework
 
 class FeedViewController: UIViewController {
     
+    var socialsList: UITableView!
+    var eventsList: [Event] = []
+    var selectedEvent: Event!
+    let save_the_quota = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initUI()
         debugPrint("view for " + (self.navigationController as! AccountNavController).logged_in_user)
-
+        download_events()
+        initEventUpdater()
+        newEventListener()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        socialsList.reloadData()
     }
     
 

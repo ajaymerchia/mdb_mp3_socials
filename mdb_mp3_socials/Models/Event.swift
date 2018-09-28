@@ -10,7 +10,23 @@ import Foundation
 import UIKit
 import FirebaseStorage
 
-class Event {
+class Event:Equatable, Comparable {
+    static func == (lhs: Event, rhs: Event) -> Bool {
+        return lhs.event_id == rhs.event_id
+    }
+    
+    static func == (lhs: Event, rhs: String) -> Bool {
+        return lhs.event_id == rhs
+    }
+    
+    static func == (lhs: String, rhs: Event) -> Bool {
+        return lhs == rhs.event_id
+    }
+    
+    static func < (lhs: Event, rhs: Event) -> Bool {
+        return lhs.date.timeIntervalSince1970 < rhs.date.timeIntervalSince1970
+    }
+    
     var event_id: String!
     
     var title: String!
@@ -24,8 +40,9 @@ class Event {
     var imageRoute: String!
     var image: UIImage!
     
-    init(id:String, dict: [String: Any]) {
+    init(id:String, dict: [String: AnyObject]) {
         self.event_id = id
+        
         
         if let title = dict["title"] as? String {
             self.title = title
@@ -60,15 +77,15 @@ class Event {
         
         self.image = UIImage(named: "default_event")
         self.imageRoute = id
-        assignImageForFile(named: id)
+//        assignImageForFile(named: id)
     }
     
-    func assignImageForFile(named: String) {
+    func assignImageEventWith(id: String) {
         let image_directory = Storage.storage().reference().child("images")
-        let imageFile = image_directory.child(named)
+        let imageFile = image_directory.child(id)
         
-        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-        imageFile.getData(maxSize: 2 * 1024 * 1024) { data, error in
+        // Download in memory with a maximum allowed size of 5MB (1 * 1024 * 1024 bytes)
+        imageFile.getData(maxSize: 5 * 1024 * 1024) { data, error in
             if let error = error {
                 // Uh-oh, an error occurred!
                 debugPrint("Error with file retrieve", error)

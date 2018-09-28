@@ -10,8 +10,24 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    var event: Event!
+    var currUser: String!
+
+    
+    var event_img: UIImageView!
+    var event_title: UILabel!
+    var event_description: UILabel!
+    var event_poster: UILabel!
+    var interested_list: UILabel!
+    var num_interested_label: UILabel!
+    
+    var interestButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initUI()
+        debugPrint(event, event.event_id)
 
         // Do any additional setup after loading the view.
     }

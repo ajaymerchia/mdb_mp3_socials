@@ -27,6 +27,14 @@ extension NewSocialViewController {
         let event_id = String(format:"%02X", eventNameField.text!.hashValue) + String(format: "%02X", Date.init().description.hashValue)
         
         event_entry["id"] = event_id
+    
+        let prevVC = (self.presentingViewController as! UINavigationController).viewControllers[0] as! FeedViewController
+        debugPrint(prevVC.save_the_quota)
+        debugPrint("Pushing Event to Database")
+        if prevVC.save_the_quota {
+            pushEventObjectToDatabase(object: event_entry)
+            return
+        }
         
         
         
@@ -65,6 +73,8 @@ extension NewSocialViewController {
     func pushEventObjectToDatabase(object: [String: Any]) {
         let ref = Database.database().reference()
         let userRef = ref.child("events").child(object["id"] as! String)
+        
+        debugPrint("Pushing Event to Database")
         
         userRef.updateChildValues(object, withCompletionBlock: { (error, ref) in
             if error != nil {

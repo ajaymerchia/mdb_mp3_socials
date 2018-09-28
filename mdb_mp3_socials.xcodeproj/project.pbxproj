@@ -10,6 +10,9 @@
 		410A8B1085B1BD72723B3395 /* Pods_mdb_mp3_socials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD260F0EA5CB9014D1DE3FE9 /* Pods_mdb_mp3_socials.framework */; };
 		4B11C20E66C701963E3A440F /* Pods_mdb_mp3_socialsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3232D1B5D6F42D54AD3F73 /* Pods_mdb_mp3_socialsTests.framework */; };
 		A76E128F405BA68C041C9D6B /* Pods_mdb_mp3_socialsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B57099BC3C9BC48D66C0AA /* Pods_mdb_mp3_socialsUITests.framework */; };
+		B74309B8215E8B80004A848E /* Feed-download.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74309B7215E8B80004A848E /* Feed-download.swift */; };
+		B74309BA215E9946004A848E /* Detail-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74309B9215E9946004A848E /* Detail-initUI.swift */; };
+		B74309BC215E9E0C004A848E /* Detail-interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74309BB215E9E0C004A848E /* Detail-interest.swift */; };
 		B7CD48C8215CDA6E00DB594C /* Login-main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48C7215CDA6E00DB594C /* Login-main.swift */; };
 		B7CD48CC215CDB4000DB594C /* Login-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48CB215CDB4000DB594C /* Login-initUI.swift */; };
 		B7CD48CE215CDDF300DB594C /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48CD215CDDF300DB594C /* utils.swift */; };
@@ -45,6 +48,8 @@
 		B7DB94E4215CD84D0048AE49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7DB94E3215CD84D0048AE49 /* GoogleService-Info.plist */; };
 		B7FDED74215DA56E0083CF29 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FDED73215DA56E0083CF29 /* Event.swift */; };
 		B7FDED76215DC0480083CF29 /* NewSocial-EventCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FDED75215DC0480083CF29 /* NewSocial-EventCreate.swift */; };
+		B7FDED78215E0A2F0083CF29 /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FDED77215E0A2F0083CF29 /* SocialCell.swift */; };
+		B7FDED7A215E0FFF0083CF29 /* Feed-tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FDED79215E0FFF0083CF29 /* Feed-tableview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,9 @@
 		99846A6E8C6272C92DA18316 /* Pods-mdb_mp3_socialsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdb_mp3_socialsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mdb_mp3_socialsTests/Pods-mdb_mp3_socialsTests.release.xcconfig"; sourceTree = "<group>"; };
 		AD260F0EA5CB9014D1DE3FE9 /* Pods_mdb_mp3_socials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mdb_mp3_socials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFF2163019F04FB0790DE95 /* Pods-mdb_mp3_socialsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdb_mp3_socialsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mdb_mp3_socialsTests/Pods-mdb_mp3_socialsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B74309B7215E8B80004A848E /* Feed-download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Feed-download.swift"; sourceTree = "<group>"; };
+		B74309B9215E9946004A848E /* Detail-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detail-initUI.swift"; sourceTree = "<group>"; };
+		B74309BB215E9E0C004A848E /* Detail-interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detail-interest.swift"; sourceTree = "<group>"; };
 		B7CD48C7215CDA6E00DB594C /* Login-main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-main.swift"; sourceTree = "<group>"; };
 		B7CD48CB215CDB4000DB594C /* Login-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-initUI.swift"; sourceTree = "<group>"; };
 		B7CD48CD215CDDF300DB594C /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
@@ -112,6 +120,8 @@
 		B7DB94E3215CD84D0048AE49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B7FDED73215DA56E0083CF29 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B7FDED75215DC0480083CF29 /* NewSocial-EventCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewSocial-EventCreate.swift"; sourceTree = "<group>"; };
+		B7FDED77215E0A2F0083CF29 /* SocialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCell.swift; sourceTree = "<group>"; };
+		B7FDED79215E0FFF0083CF29 /* Feed-tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Feed-tableview.swift"; sourceTree = "<group>"; };
 		DF4E255C4475DECC41D1E6D3 /* Pods-mdb_mp3_socials.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdb_mp3_socials.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mdb_mp3_socials/Pods-mdb_mp3_socials.debug.xcconfig"; sourceTree = "<group>"; };
 		F2B57099BC3C9BC48D66C0AA /* Pods_mdb_mp3_socialsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mdb_mp3_socialsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9B33AF29CA6B320E1BC535 /* Pods-mdb_mp3_socialsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdb_mp3_socialsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mdb_mp3_socialsUITests/Pods-mdb_mp3_socialsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -221,8 +231,11 @@
 		B7CD48F8215CF9AA00DB594C /* FeedViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B7FDED77215E0A2F0083CF29 /* SocialCell.swift */,
 				B7CD48F6215CF9A300DB594C /* Feed-main.swift */,
 				B7CD48FC215D551400DB594C /* Feed-initUI.swift */,
+				B7FDED79215E0FFF0083CF29 /* Feed-tableview.swift */,
+				B74309B7215E8B80004A848E /* Feed-download.swift */,
 			);
 			path = FeedViewController;
 			sourceTree = "<group>";
@@ -251,6 +264,8 @@
 			isa = PBXGroup;
 			children = (
 				B7CD4903215D580400DB594C /* DetailViewController.swift */,
+				B74309B9215E9946004A848E /* Detail-initUI.swift */,
+				B74309BB215E9E0C004A848E /* Detail-interest.swift */,
 			);
 			path = DetailViewController;
 			sourceTree = "<group>";
@@ -575,6 +590,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7CD48F3215CEE4100DB594C /* Login-logic.swift in Sources */,
+				B74309B8215E8B80004A848E /* Feed-download.swift in Sources */,
 				B7CD4907215D5ABE00DB594C /* NewSocial-initUI.swift in Sources */,
 				B7CD48EF215CED4600DB594C /* Signup-main.swift in Sources */,
 				B7CD48F7215CF9A300DB594C /* Feed-main.swift in Sources */,
@@ -586,12 +602,16 @@
 				B7CD48C8215CDA6E00DB594C /* Login-main.swift in Sources */,
 				B7FDED74215DA56E0083CF29 /* Event.swift in Sources */,
 				B7CD48E6215CE4E200DB594C /* rgba.swift in Sources */,
+				B7FDED7A215E0FFF0083CF29 /* Feed-tableview.swift in Sources */,
 				B7DB94B6215CD79A0048AE49 /* AppDelegate.swift in Sources */,
 				B7CD48F1215CED5200DB594C /* Signup-initUI.swift in Sources */,
 				B7CD490F215D656600DB594C /* NewSocialViewController.swift in Sources */,
 				B7CD48F5215CF33500DB594C /* Signup-logic.swift in Sources */,
 				B7CD48CE215CDDF300DB594C /* utils.swift in Sources */,
+				B74309BC215E9E0C004A848E /* Detail-interest.swift in Sources */,
 				B7FDED76215DC0480083CF29 /* NewSocial-EventCreate.swift in Sources */,
+				B7FDED78215E0A2F0083CF29 /* SocialCell.swift in Sources */,
+				B74309BA215E9946004A848E /* Detail-initUI.swift in Sources */,
 				B7CD4904215D580400DB594C /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
