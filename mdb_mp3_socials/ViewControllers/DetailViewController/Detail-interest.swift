@@ -53,8 +53,8 @@ extension DetailViewController {
                 if error != nil {
                     return
                 } else {
-                    self.num_interested_label.text = "\(count)"
-                    self.interested_list.text = "Interested: " + (interested_folks).joined(separator: ", ")
+                    self.num_interested_label.text = "\(count) Interested"
+                    self.interested_list.text = "Guest List: " + (interested_folks).joined(separator: ", ")
 
                 }
             })

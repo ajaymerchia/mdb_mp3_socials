@@ -21,7 +21,26 @@ class DetailViewController: UIViewController {
     var interested_list: UILabel!
     var num_interested_label: UILabel!
     
+    var event_date: UILabel!
+    var event_time: UILabel!
+    
     var interestButton: UIButton!
+    
+    
+    var width: CGFloat!
+    let marginal_padding:CGFloat = 2.5
+    let left_pad_mult: CGFloat = 7
+    
+    
+    
+    
+    
+   
+
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
