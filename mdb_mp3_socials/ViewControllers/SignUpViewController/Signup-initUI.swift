@@ -9,9 +9,11 @@
 import Foundation
 import UIKit
 import ChameleonFramework
+import FirebaseDatabase
 
 extension SignUpViewController {
     func initUI() {
+        getRestrictedUsernames()
         init_text()
         init_textfield()
         init_buttons()
@@ -118,6 +120,25 @@ extension SignUpViewController {
         sign_up_button.layer.cornerRadius = 5
 
         view.addSubview(sign_up_button)
+    }
+    
+    func getRestrictedUsernames() {
+        let ref = Database.database().reference()
+        let userRef = ref.child("users")
+        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            for (name, _) in value ?? [:] {
+                if let usrnm = name as? String {
+                    self.restrictedUsernames.append(usrnm)
+                }
+                
+            }
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
     
 }

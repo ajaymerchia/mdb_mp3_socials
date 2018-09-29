@@ -19,7 +19,7 @@ extension NewSocialViewController {
         event_entry["description"] = eventDescField.text!
         event_entry["date"] = eventDateField.date.description
         
-        event_entry["poster"] = (self.presentingViewController as? AccountNavController)?.logged_in_user
+        event_entry["poster"] = fullName
         
         event_entry["numInterested"] = 0
         event_entry["interestedMembers"] = []
@@ -100,8 +100,6 @@ extension NewSocialViewController {
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(defaultAction)
         self.present(alert, animated: true, completion: nil)
-        
-        
     }
 }
 

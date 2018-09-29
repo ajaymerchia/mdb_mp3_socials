@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+import JGProgressHUD
 
 extension LoginViewController {
     func connect_buttons() {
@@ -26,10 +27,11 @@ extension LoginViewController {
             // Get user value
             let value = snapshot.value as? NSDictionary
             let email = value?["email"] as? String ?? ""
+            let name = value?["fullname"] as? String ?? ""
             
             debugPrint("Got Email: " + email)
             
-            self.login_with_email(email: email, usertext: username)
+            self.login_with_email(email: email, usertext: username, fullname: name)
             
             
             // ...
@@ -38,11 +40,18 @@ extension LoginViewController {
         }
     }
     
-    func login_with_email(email: String, usertext: String) {
+    func login_with_email(email: String, usertext: String, fullname: String) {
+        debugPrint("pressed")
         advance_to_login.isUserInteractionEnabled = false
+        
+        hud = JGProgressHUD(style: .light)
+        hud.textLabel.text = "Loading"
+        hud.show(in: self.view)
+        
         
         guard let password = password_field.text else {
             advance_to_login.isUserInteractionEnabled = true
+            self.hud.dismiss()
             return
         }
         
@@ -50,9 +59,12 @@ extension LoginViewController {
             if let error = error {
                 print(error)
                 self.advance_to_login.isUserInteractionEnabled = true
+                self.hud.dismiss()
+                self.displayAlert(title: "Oops", message: "Check your password!")
                 return
             } else {
                 self.currUsername = usertext
+                self.currFullName = fullname
                 self.performSegue(withIdentifier: "login2feed", sender: self)
             }
         })
@@ -61,7 +73,6 @@ extension LoginViewController {
     
     
     func checkForAutoLogin() {
-        
         if let user = Auth.auth().currentUser {
             let ref = Database.database().reference()
             let userRef = ref.child("uid_lookup").child(user.uid)
@@ -71,15 +82,35 @@ extension LoginViewController {
                 
                 debugPrint("Got Username: " + username)
                 self.currUsername = username
-                self.performSegue(withIdentifier: "login2feed", sender: self)
                 self.advance_to_login.isUserInteractionEnabled = true
-                // ...
+                self.getFullNameFrom(username: username)
+                            
             }) { (error) in
                 print(error.localizedDescription)
                 self.advance_to_login.isUserInteractionEnabled = true
+                self.hud?.dismiss()
             }
             
             
+        }
+    }
+    
+    func getFullNameFrom(username: String) {
+        let ref = Database.database().reference()
+        let userRef = ref.child("users").child(username)
+        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let name = value?["fullname"] as? String ?? ""
+
+            self.currFullName = name
+            self.advance_to_login.isUserInteractionEnabled = true            
+            self.performSegue(withIdentifier: "login2feed", sender: self)
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+            self.advance_to_login.isUserInteractionEnabled = true
+            self.hud?.dismiss()
         }
     }
     
@@ -92,13 +123,24 @@ extension LoginViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navVC = segue.destination as? AccountNavController {
             navVC.logged_in_user = currUsername
+            navVC.logged_in_fullname = currFullName
             currUsername = nil
+            currFullName = nil
             
         }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        self.hud?.dismiss()
+        self.advance_to_login.isUserInteractionEnabled = true
         username_field.text = ""
         password_field.text = ""
+    }
+    
+    func displayAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true, completion: nil)
     }
 }

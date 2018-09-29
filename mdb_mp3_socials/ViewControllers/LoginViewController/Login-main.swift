@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class LoginViewController: UIViewController {
 
@@ -24,6 +25,9 @@ class LoginViewController: UIViewController {
     var sign_up_button: UIButton!
     
     var currUsername: String!
+    var currFullName: String!
+    
+    var hud:JGProgressHUD!
 
     
     override func viewDidLoad() {

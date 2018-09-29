@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 extension NewSocialViewController {
     func initUI() {
@@ -98,6 +99,25 @@ extension NewSocialViewController {
         createEvent.setTitle("Create Event", for: .normal)
         createEvent.addTarget(self, action: #selector(createTheEvent), for: .touchUpInside)
         view.addSubview(createEvent)
+    }
+    
+    func getFullName() {
+        fullName = (self.presentingViewController as? AccountNavController)?.logged_in_user
+        
+        let ref = Database.database().reference()
+        let userRef = ref.child("users").child(fullName)
+        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            self.fullName = value?["username"] as? String ?? self.fullName
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        
+        
     }
     
 }

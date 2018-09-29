@@ -22,6 +22,7 @@ class SignUpViewController: UIViewController {
     
     
     var currUsername: String!
+    var restrictedUsernames: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

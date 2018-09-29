@@ -22,19 +22,19 @@ extension SignUpViewController {
         sign_up_button.isUserInteractionEnabled = true
 
         let name = fullname_field.text!
-        let username = username_field.text!
-        let email = emailadd_field.text!
+        let username = username_field.text!.lowercased()
+        let email = emailadd_field.text!.lowercased()
         let password = password_field.text!
         
         guard name != "" else {
             signup_error(code: 1)
             return
         }
-        guard username != "" else {
+        guard email != "" else {
             signup_error(code: 2)
             return
         }
-        guard email != "" else {
+        guard username != "" else {
             signup_error(code: 3)
             return
         }
@@ -43,11 +43,16 @@ extension SignUpViewController {
             return
         }
         
+        if restrictedUsernames.contains(username.lowercased()) {
+            signup_error(code: 5)
+            return
+        }
+        
         Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
             if let error = error {
                 self.sign_up_button.isUserInteractionEnabled = true
                 print(error)
-                self.displayAlert(title: "There was an error", message: "Trying to make you")
+                self.displayAlert(title: "Oops!", message: "Make sure your email is correct and your password is at least 8 characters long.")
                 return
             } else {
                 guard let uid = user?.user.uid else {
@@ -87,11 +92,13 @@ extension SignUpViewController {
         case 1:
             msg = msg + "your full name."
         case 2:
-            msg = msg + "your username."
-        case 3:
             msg = msg + "your email address."
+        case 3:
+            msg = msg + "your username."
         case 4:
             msg = msg + "your password."
+        case 5:
+            msg = "Sorry! That username is already taken."
         default:
             msg = msg + " something. Try again later."
         }

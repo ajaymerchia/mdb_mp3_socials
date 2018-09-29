@@ -11,6 +11,7 @@ import UIKit
 class AccountNavController: UINavigationController {
 
     var logged_in_user:String!
+    var logged_in_fullname:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()

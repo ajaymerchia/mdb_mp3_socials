@@ -30,7 +30,7 @@ extension LoginViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if currUsername != nil {
-            performSegue(withIdentifier: "login2feed", sender: self)
+            getFullNameFrom(username: currUsername)
         }
         
         

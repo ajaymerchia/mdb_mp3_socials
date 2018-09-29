@@ -22,7 +22,7 @@ class SocialCell: UITableViewCell {
     var interested: UIButton!
     var numInterested: UILabel!
     
-    var currUser: String!
+    var currName: String!
     
     
     override func awakeFromNib() {
@@ -126,13 +126,13 @@ class SocialCell: UITableViewCell {
             var interested_folks = value["interestedMembers"] as? [String] ?? []
             
             
-            let alreadyThere = interested_folks.contains(self.currUser)
+            let alreadyThere = interested_folks.contains(self.currName)
             
             if !alreadyThere && amt > 0 {
-                interested_folks.append(self.currUser)
+                interested_folks.append(self.currName)
                 count += amt
             } else if alreadyThere && amt < 0{
-                interested_folks.remove(at: interested_folks.index(of: self.currUser)!)
+                interested_folks.remove(at: interested_folks.index(of: self.currName)!)
                 count += amt
             }
             
