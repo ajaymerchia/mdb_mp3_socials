@@ -10,12 +10,28 @@ import UIKit
 
 extension NewSocialViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @objc func createImagePicker() {
+    @objc func openActionSheet() {
+        let actionSheet = UIAlertController(title: "Select Photo From", message: "", preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) -> Void in
+            self.createImagePicker(preferredType: .camera)
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Photo Gallery", style: .default, handler: { (action) -> Void in
+            self.createImagePicker(preferredType: .photoLibrary)
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(actionSheet, animated: true)
+        
+    }
+    
+    @objc func createImagePicker(preferredType: UIImagePickerController.SourceType) {
         
         let picker = UIImagePickerController()
         picker.delegate = self
         if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera)) {
-            picker.sourceType = .camera
+            picker.sourceType = preferredType
             picker.allowsEditing = true
             picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
             self.present(picker, animated: true, completion: nil)

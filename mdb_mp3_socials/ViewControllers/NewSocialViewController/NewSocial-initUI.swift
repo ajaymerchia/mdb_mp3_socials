@@ -89,7 +89,8 @@ extension NewSocialViewController {
         eventImgPicker = UIButton(frame: CGRect(x: 0, y: navbar.frame.maxY, width: view.frame.width, height: 2.0/3 * view.frame.width))
         eventImgPicker.setImage(UIImage(named: "placeholder"), for: .normal)
         eventImgPicker.imageView?.contentMode = .scaleAspectFill
-        eventImgPicker.addTarget(self, action: #selector(createImagePicker), for: .touchUpInside)
+//        eventImgPicker.addTarget(self, action: #selector(createImagePicker), for: .touchUpInside)
+        eventImgPicker.addTarget(self, action: #selector(openActionSheet), for: .touchUpInside)
         view.addSubview(eventImgPicker)
         
     }
