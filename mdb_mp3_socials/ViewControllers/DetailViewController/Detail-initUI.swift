@@ -12,7 +12,7 @@ import UIKit
 extension DetailViewController {
     func initUI() {
         width = view.frame.width
-        currUser = (self.navigationController as! AccountNavController).logged_in_user!
+        currUser = (self.navigationController as! AccountNavController).logged_in_fullname!
         init_img()
         init_text()
         init_buttons()
