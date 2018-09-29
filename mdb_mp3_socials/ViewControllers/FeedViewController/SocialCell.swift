@@ -36,7 +36,8 @@ class SocialCell: UITableViewCell {
         
         // Initialization code
         socialImage = UIImageView(frame: CGRect(x:0, y: 0, width: width+100, height: 150))
-        socialImage.contentMode = .scaleToFill
+        socialImage.contentMode = .scaleAspectFill
+        socialImage.clipsToBounds = true
         
         socialName = UILabel(frame: CGRect(x: left_pad_mult*marginal_padding, y: socialImage.frame.maxY+8*marginal_padding, width: contentView.frame.width-2*left_pad_mult*marginal_padding, height: 25))
         socialName.font = UIFont(name: "Avenir-Black", size: 25)

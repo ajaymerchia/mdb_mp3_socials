@@ -14,7 +14,7 @@ class FeedViewController: UIViewController {
     var socialsList: UITableView!
     var eventsList: [Event] = []
     var selectedEvent: Event!
-    let save_the_quota = true
+    let save_the_quota = false
     
     override func viewDidLoad() {
         super.viewDidLoad()

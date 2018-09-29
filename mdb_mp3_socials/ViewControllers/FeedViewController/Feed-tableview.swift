@@ -27,7 +27,9 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         // Initialize Cell
         cell.awakeFromNib()
         cell.initialCellFrom(event: eventsList[indexPath.row])
-        let curr_user = (self.navigationController as! AccountNavController).logged_in_fullname!
+        guard let curr_user = (self.navigationController as! AccountNavController).logged_in_fullname else {
+            return cell
+        }
         cell.currName = curr_user
         
         if eventsList[indexPath.row].interestedMembers.contains(curr_user) {

@@ -27,7 +27,8 @@ extension DetailViewController {
     func init_img() {
         // Initialization code
         event_img = UIImageView(frame: CGRect(x:0, y: 0, width: width, height: 250))
-        event_img.contentMode = .scaleToFill
+        event_img.contentMode = .scaleAspectFill
+        event_img.clipsToBounds = true
         event_img.image = event.image
         
         view.addSubview(event_img)

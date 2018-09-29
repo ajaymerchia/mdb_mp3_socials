@@ -18,7 +18,15 @@ extension LoginViewController {
     }
     
     @objc func get_email_login() {
+        advance_to_login.isUserInteractionEnabled = false
         guard let username = username_field.text?.lowercased() else {
+            self.displayAlert(title: "Oops", message: "Check your username!")
+            advance_to_login.isUserInteractionEnabled = true
+            return
+        }
+        if username == "" {
+            self.displayAlert(title: "Oops", message: "Check your username!")
+            advance_to_login.isUserInteractionEnabled = true
             return
         }
         let ref = Database.database().reference()
@@ -41,8 +49,8 @@ extension LoginViewController {
     }
     
     func login_with_email(email: String, usertext: String, fullname: String) {
-        debugPrint("pressed")
         advance_to_login.isUserInteractionEnabled = false
+        debugPrint("pressed")
         
         hud = JGProgressHUD(style: .light)
         hud.textLabel.text = "Loading"
@@ -54,6 +62,14 @@ extension LoginViewController {
             self.hud.dismiss()
             return
         }
+        
+        if password == "" {
+            advance_to_login.isUserInteractionEnabled = true
+            self.hud.dismiss()
+            self.displayAlert(title: "Oops", message: "Check your password!")
+            return
+        }
+    
         
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
             if let error = error {

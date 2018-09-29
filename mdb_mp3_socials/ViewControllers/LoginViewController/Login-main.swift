@@ -27,7 +27,10 @@ class LoginViewController: UIViewController {
     var currUsername: String!
     var currFullName: String!
     
+    
     var hud:JGProgressHUD!
+    
+    // This constraint ties an element at zero points from the bottom layout guide
 
     
     override func viewDidLoad() {
@@ -36,11 +39,8 @@ class LoginViewController: UIViewController {
         initUI()
         connect_buttons()
         
+
 //        Utils.printFontFamilies()
     }
-    
-    
-   
-    
 
 }
