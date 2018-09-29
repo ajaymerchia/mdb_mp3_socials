@@ -19,7 +19,7 @@ extension NewSocialViewController {
         event_entry["description"] = eventDescField.text!
         event_entry["date"] = eventDateField.date.description
         
-        event_entry["poster"] = fullName
+        event_entry["poster"] = (self.presentingViewController as? AccountNavController)?.logged_in_fullname
         
         event_entry["numInterested"] = 0
         event_entry["interestedMembers"] = []

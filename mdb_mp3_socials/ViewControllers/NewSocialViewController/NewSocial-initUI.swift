@@ -18,6 +18,8 @@ extension NewSocialViewController {
         init_textinput()
         init_datepicker()
         init_button()
+        
+        getFullName()
     }
     
     func init_text() {
