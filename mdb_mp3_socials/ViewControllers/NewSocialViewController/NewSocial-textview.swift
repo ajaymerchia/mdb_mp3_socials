@@ -24,5 +24,4 @@ extension NewSocialViewController: UITextViewDelegate {
         }
     }
     
-    
 }

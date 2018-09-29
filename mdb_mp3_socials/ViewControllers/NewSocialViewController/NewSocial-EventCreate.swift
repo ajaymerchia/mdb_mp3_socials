@@ -42,7 +42,7 @@ extension NewSocialViewController {
         
         let photoRef = image_directory.child(event_id)
         
-        guard let photoData = eventImageView.image?.jpegData(compressionQuality: 0.7) else {
+        guard let photoData = eventImgPicker.imageView?.image?.jpegData(compressionQuality: 0.4) else {
             return
         }
 

@@ -9,12 +9,13 @@ import UIKit
 
 class NewSocialViewController: UIViewController {
 
+    var navbar: UINavigationBar!
+    
     var eventNameField: UITextField!
     var eventDescField: UITextView!
     var eventDateField: UIDatePicker!
     var eventImgPicker: UIButton!
-    var eventImageView: UIImageView!
-    
+    var imgPickerPrompt: UILabel!
     var createEvent: UIButton!
     
     override func viewDidLoad() {

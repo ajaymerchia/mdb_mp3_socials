@@ -12,24 +12,44 @@ import UIKit
 extension NewSocialViewController {
     func initUI() {
         init_nav()
+        init_photopicker()
+        init_text()
         init_textinput()
         init_datepicker()
-        init_photopicker()
         init_button()
     }
     
+    func init_text() {
+        imgPickerPrompt = UILabel(frame: CGRect(x: 0, y: eventImgPicker.frame.midY + Utils.PADDING, width: view.frame.width, height: 50))
+        
+        imgPickerPrompt.text = "Tap to add image"
+        imgPickerPrompt.textAlignment = .center
+        imgPickerPrompt.font = UIFont(name: "Avenir-Black", size: 24)
+        imgPickerPrompt.textColor = .white
+            
+            
+        view.addSubview(imgPickerPrompt)
+        
+    }
+    
     func init_nav() {
-        let navbar = UINavigationBar(frame: CGRect(x: 0, y: Utils.PADDING, width: view.frame.width, height: 50));
+        navbar = UINavigationBar(frame: CGRect(x: 0, y: Utils.PADDING, width: view.frame.width, height: 50));
         navbar.tintColor = UIColor.flatGray
         navbar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navbar.shadowImage = UIImage()
         navbar.isTranslucent = true
+        navbar.titleTextAttributes =
+            [NSAttributedString.Key.font: UIFont(name: "Avenir-Roman", size: 21)!]
         
         self.view.addSubview(navbar)
         
-        let navItem = UINavigationItem(title: "")
+        let navItem = UINavigationItem(title: "Create a New Social")
+        
+        
+        
         let navBarbutton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.stop, target: self, action: #selector(go_back))
         navItem.leftBarButtonItem = navBarbutton
+    
         
         navbar.items = [navItem]
     }
@@ -39,16 +59,17 @@ extension NewSocialViewController {
     }
     
     func init_textinput() {
-        eventNameField = UITextField(frame: CGRect(x: 0, y: 150, width: view.frame.width, height: 50))
+        eventNameField = UITextField(frame: CGRect(x: Utils.PADDING, y: eventImgPicker.frame.maxY, width: view.frame.width, height: 80))
         eventNameField.placeholder = "Event Name"
-        eventNameField.backgroundColor = UIColor.flatSkyBlue
+        eventNameField.font = UIFont(name: "Avenir-Medium", size: 30)
         view.addSubview(eventNameField)
         
-        eventDescField = UITextView(frame: CGRect(x: 0, y: 200, width: view.frame.width, height: 50))
+        eventDescField = UITextView(frame: CGRect(x: Utils.PADDING, y: eventNameField.frame.maxY, width: view.frame.width - 2*Utils.PADDING, height: 50))
         eventDescField.delegate = self
         eventDescField.text = "Event Description"
         eventDescField.textColor = UIColor.lightGray
-        eventDescField.backgroundColor = UIColor.flatSkyBlue
+        eventDescField.font = UIFont(name: "Avenir-Light", size: 20)
+
         eventDescField.textContainer.maximumNumberOfLines = 2
         eventDescField.textContainer.lineBreakMode = .byTruncatingTail
 
@@ -56,27 +77,24 @@ extension NewSocialViewController {
     }
     
     func init_datepicker() {
-        eventDateField = UIDatePicker(frame: CGRect(x: 50, y: 300, width: view.frame.width-100, height: 100))
+        eventDateField = UIDatePicker(frame: CGRect(x: 50, y: eventDescField.frame.maxY+Utils.PADDING, width: view.frame.width-100, height: 100))
         
-        eventDateField.backgroundColor = rgba(200,200,200,1)
         view.addSubview(eventDateField)
     }
     
     func init_photopicker() {
-        eventImgPicker = UIButton(frame: CGRect(x: 100, y: 400, width: 200, height: 50))
-        eventImgPicker.setTitle("add photo", for: .normal)
-        eventImgPicker.backgroundColor = .red
+        eventImgPicker = UIButton(frame: CGRect(x: 0, y: navbar.frame.maxY, width: view.frame.width, height: 2.0/3 * view.frame.width))
+        eventImgPicker.setImage(UIImage(named: "placeholder"), for: .normal)
+        eventImgPicker.imageView?.contentMode = .scaleAspectFill
         eventImgPicker.addTarget(self, action: #selector(createImagePicker), for: .touchUpInside)
         view.addSubview(eventImgPicker)
         
-        
-        eventImageView = UIImageView(frame: CGRect(x: 100, y: 500, width: 300, height: 300))
-        view.addSubview(eventImageView)
     }
     
     func init_button() {
-        createEvent = UIButton(frame: CGRect(x: 50, y: view.frame.height-50, width: view.frame.width-100, height: 50))
-        createEvent.backgroundColor = UIColor.flatLime
+        createEvent = UIButton(frame: CGRect(x: 50, y: view.frame.height-100, width: view.frame.width-100, height: 50))
+        createEvent.backgroundColor = UIColor.flatSkyBlueDark
+        createEvent.layer.cornerRadius = 5
         createEvent.setTitle("Create Event", for: .normal)
         createEvent.addTarget(self, action: #selector(createTheEvent), for: .touchUpInside)
         view.addSubview(createEvent)

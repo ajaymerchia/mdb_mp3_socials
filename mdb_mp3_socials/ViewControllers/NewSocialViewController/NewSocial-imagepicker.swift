@@ -30,12 +30,9 @@ extension NewSocialViewController: UIImagePickerControllerDelegate, UINavigation
     @objc func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
 
-        debugPrint("hello world")
         let chosenImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-
-
-        eventImageView.contentMode = .scaleAspectFit
-        eventImageView.image = chosenImage
+        eventImgPicker.setImage(chosenImage, for: .normal)
+        imgPickerPrompt.removeFromSuperview()
         dismiss(animated:true, completion: nil)
     }
 
