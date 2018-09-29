@@ -39,13 +39,17 @@ extension LoginViewController {
     }
     
     func login_with_email(email: String, usertext: String) {
+        advance_to_login.isUserInteractionEnabled = false
+        
         guard let password = password_field.text else {
+            advance_to_login.isUserInteractionEnabled = true
             return
         }
         
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
             if let error = error {
                 print(error)
+                self.advance_to_login.isUserInteractionEnabled = true
                 return
             } else {
                 self.currUsername = usertext
@@ -68,9 +72,11 @@ extension LoginViewController {
                 debugPrint("Got Username: " + username)
                 self.currUsername = username
                 self.performSegue(withIdentifier: "login2feed", sender: self)
+                self.advance_to_login.isUserInteractionEnabled = true
                 // ...
             }) { (error) in
                 print(error.localizedDescription)
+                self.advance_to_login.isUserInteractionEnabled = true
             }
             
             
