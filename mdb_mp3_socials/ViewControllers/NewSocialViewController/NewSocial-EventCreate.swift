@@ -27,6 +27,16 @@ extension NewSocialViewController {
         let event_id = String(format:"%02X", eventNameField.text!.hashValue) + String(format: "%02X", Date.init().description.hashValue)
         
         event_entry["id"] = event_id
+        
+        for (key, value) in event_entry {
+            if let str = value as? String {
+                if str == "" || str == "Event Description"{
+                    displayAlert(title: "Oops", message: "Please fill out the " + key)
+                    return
+                }
+            }
+            
+        }
     
         let prevVC = (self.presentingViewController as! UINavigationController).viewControllers[0] as! FeedViewController
         debugPrint(prevVC.save_the_quota)
@@ -85,7 +95,14 @@ extension NewSocialViewController {
         })
     }
     
-    
+    func displayAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+    }
 }
 
 

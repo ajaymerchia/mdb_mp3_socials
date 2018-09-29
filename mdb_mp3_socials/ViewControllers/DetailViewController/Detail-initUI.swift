@@ -99,9 +99,6 @@ extension DetailViewController {
     }
     
     func init_buttons() {
-        
-        
-        
         interestButton = UIButton(frame: CGRect(x: left_pad_mult*marginal_padding, y: event_description.frame.maxY + Utils.PADDING/2.5, width: 30, height: 30))
         interestButton.setImage(UIImage(named: "star_hollow"), for: .normal)
         interestButton.setImage(UIImage(named: "star"), for: .selected)
