@@ -102,20 +102,7 @@ extension NewSocialViewController {
     }
     
     func getFullName() {
-        fullName = (self.presentingViewController as? AccountNavController)?.logged_in_user
-        
-        let ref = Database.database().reference()
-        let userRef = ref.child("users").child(fullName)
-        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            let value = snapshot.value as? NSDictionary
-            self.fullName = value?["username"] as? String ?? self.fullName
-            
-            // ...
-        }) { (error) in
-            print(error.localizedDescription)
-        }
-        
+        self.fullName = (self.presentingViewController as? AccountNavController)?.logged_in_fullname
         
         
     }
