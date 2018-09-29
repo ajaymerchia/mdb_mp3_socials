@@ -13,19 +13,11 @@
 		B74309B8215E8B80004A848E /* Feed-download.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74309B7215E8B80004A848E /* Feed-download.swift */; };
 		B74309BA215E9946004A848E /* Detail-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74309B9215E9946004A848E /* Detail-initUI.swift */; };
 		B74309BC215E9E0C004A848E /* Detail-interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74309BB215E9E0C004A848E /* Detail-interest.swift */; };
+		B74309BE215EFA38004A848E /* Login-animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74309BD215EFA38004A848E /* Login-animation.swift */; };
+		B74309C0215F025C004A848E /* Playball-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B74309BF215F0222004A848E /* Playball-Regular.ttf */; };
 		B7CD48C8215CDA6E00DB594C /* Login-main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48C7215CDA6E00DB594C /* Login-main.swift */; };
 		B7CD48CC215CDB4000DB594C /* Login-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48CB215CDB4000DB594C /* Login-initUI.swift */; };
 		B7CD48CE215CDDF300DB594C /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48CD215CDDF300DB594C /* utils.swift */; };
-		B7CD48DB215CE2B300DB594C /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7CD48D1215CE15200DB594C /* OpenSans-Bold.ttf */; };
-		B7CD48DC215CE2B300DB594C /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7CD48D5215CE15200DB594C /* OpenSans-BoldItalic.ttf */; };
-		B7CD48DD215CE2B300DB594C /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7CD48D9215CE15200DB594C /* OpenSans-ExtraBold.ttf */; };
-		B7CD48DE215CE2B300DB594C /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7CD48D4215CE15200DB594C /* OpenSans-ExtraBoldItalic.ttf */; };
-		B7CD48DF215CE2B300DB594C /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7CD48D7215CE15200DB594C /* OpenSans-Italic.ttf */; };
-		B7CD48E0215CE2B300DB594C /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7CD48D2215CE15200DB594C /* OpenSans-Light.ttf */; };
-		B7CD48E1215CE2B300DB594C /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7CD48D8215CE15200DB594C /* OpenSans-LightItalic.ttf */; };
-		B7CD48E2215CE2B300DB594C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7CD48D3215CE15200DB594C /* OpenSans-Regular.ttf */; };
-		B7CD48E3215CE2B300DB594C /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7CD48D6215CE15200DB594C /* OpenSans-Semibold.ttf */; };
-		B7CD48E4215CE2B300DB594C /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7CD48DA215CE15200DB594C /* OpenSans-SemiboldItalic.ttf */; };
 		B7CD48E6215CE4E200DB594C /* rgba.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48E5215CE4E200DB594C /* rgba.swift */; };
 		B7CD48EF215CED4600DB594C /* Signup-main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48EE215CED4600DB594C /* Signup-main.swift */; };
 		B7CD48F1215CED5200DB594C /* Signup-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48F0215CED5200DB594C /* Signup-initUI.swift */; };
@@ -79,19 +71,11 @@
 		B74309B7215E8B80004A848E /* Feed-download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Feed-download.swift"; sourceTree = "<group>"; };
 		B74309B9215E9946004A848E /* Detail-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detail-initUI.swift"; sourceTree = "<group>"; };
 		B74309BB215E9E0C004A848E /* Detail-interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detail-interest.swift"; sourceTree = "<group>"; };
+		B74309BD215EFA38004A848E /* Login-animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-animation.swift"; sourceTree = "<group>"; };
+		B74309BF215F0222004A848E /* Playball-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Playball-Regular.ttf"; sourceTree = "<group>"; };
 		B7CD48C7215CDA6E00DB594C /* Login-main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-main.swift"; sourceTree = "<group>"; };
 		B7CD48CB215CDB4000DB594C /* Login-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-initUI.swift"; sourceTree = "<group>"; };
 		B7CD48CD215CDDF300DB594C /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
-		B7CD48D1215CE15200DB594C /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
-		B7CD48D2215CE15200DB594C /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
-		B7CD48D3215CE15200DB594C /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		B7CD48D4215CE15200DB594C /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		B7CD48D5215CE15200DB594C /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
-		B7CD48D6215CE15200DB594C /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
-		B7CD48D7215CE15200DB594C /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
-		B7CD48D8215CE15200DB594C /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
-		B7CD48D9215CE15200DB594C /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
-		B7CD48DA215CE15200DB594C /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		B7CD48E5215CE4E200DB594C /* rgba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rgba.swift; sourceTree = "<group>"; };
 		B7CD48EE215CED4600DB594C /* Signup-main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Signup-main.swift"; sourceTree = "<group>"; };
 		B7CD48F0215CED5200DB594C /* Signup-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Signup-initUI.swift"; sourceTree = "<group>"; };
@@ -186,6 +170,7 @@
 			children = (
 				B7CD48C7215CDA6E00DB594C /* Login-main.swift */,
 				B7CD48CB215CDB4000DB594C /* Login-initUI.swift */,
+				B74309BD215EFA38004A848E /* Login-animation.swift */,
 				B7CD48F2215CEE4100DB594C /* Login-logic.swift */,
 			);
 			path = LoginViewController;
@@ -204,16 +189,7 @@
 		B7CD48D0215CE14300DB594C /* FontGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				B7CD48D1215CE15200DB594C /* OpenSans-Bold.ttf */,
-				B7CD48D5215CE15200DB594C /* OpenSans-BoldItalic.ttf */,
-				B7CD48D9215CE15200DB594C /* OpenSans-ExtraBold.ttf */,
-				B7CD48D4215CE15200DB594C /* OpenSans-ExtraBoldItalic.ttf */,
-				B7CD48D7215CE15200DB594C /* OpenSans-Italic.ttf */,
-				B7CD48D2215CE15200DB594C /* OpenSans-Light.ttf */,
-				B7CD48D8215CE15200DB594C /* OpenSans-LightItalic.ttf */,
-				B7CD48D3215CE15200DB594C /* OpenSans-Regular.ttf */,
-				B7CD48D6215CE15200DB594C /* OpenSans-Semibold.ttf */,
-				B7CD48DA215CE15200DB594C /* OpenSans-SemiboldItalic.ttf */,
+				B74309BF215F0222004A848E /* Playball-Regular.ttf */,
 			);
 			path = FontGenerator;
 			sourceTree = "<group>";
@@ -452,20 +428,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7CD48DF215CE2B300DB594C /* OpenSans-Italic.ttf in Resources */,
-				B7CD48DC215CE2B300DB594C /* OpenSans-BoldItalic.ttf in Resources */,
 				B7DB94C0215CD79B0048AE49 /* LaunchScreen.storyboard in Resources */,
-				B7CD48E3215CE2B300DB594C /* OpenSans-Semibold.ttf in Resources */,
-				B7CD48DD215CE2B300DB594C /* OpenSans-ExtraBold.ttf in Resources */,
 				B7DB94E4215CD84D0048AE49 /* GoogleService-Info.plist in Resources */,
-				B7CD48E1215CE2B300DB594C /* OpenSans-LightItalic.ttf in Resources */,
+				B74309C0215F025C004A848E /* Playball-Regular.ttf in Resources */,
 				B7DB94BD215CD79B0048AE49 /* Assets.xcassets in Resources */,
-				B7CD48DB215CE2B300DB594C /* OpenSans-Bold.ttf in Resources */,
 				B7DB94BB215CD79A0048AE49 /* Main.storyboard in Resources */,
-				B7CD48E4215CE2B300DB594C /* OpenSans-SemiboldItalic.ttf in Resources */,
-				B7CD48E0215CE2B300DB594C /* OpenSans-Light.ttf in Resources */,
-				B7CD48E2215CE2B300DB594C /* OpenSans-Regular.ttf in Resources */,
-				B7CD48DE215CE2B300DB594C /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +566,7 @@
 				B7CD4909215D614400DB594C /* NewSocial-textview.swift in Sources */,
 				B7CD48CC215CDB4000DB594C /* Login-initUI.swift in Sources */,
 				B7CD48FA215D537600DB594C /* AccountNavController.swift in Sources */,
+				B74309BE215EFA38004A848E /* Login-animation.swift in Sources */,
 				B7CD48C8215CDA6E00DB594C /* Login-main.swift in Sources */,
 				B7FDED74215DA56E0083CF29 /* Event.swift in Sources */,
 				B7CD48E6215CE4E200DB594C /* rgba.swift in Sources */,

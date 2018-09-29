@@ -13,7 +13,7 @@ import FirebaseAuth
 
 extension LoginViewController {
     func connect_buttons() {
-        login_button.addTarget(self, action: #selector(get_email_login), for: .touchUpInside)
+//        login_button.addTarget(self, action: #selector(get_email_login), for: .touchUpInside)
         sign_up_button.addTarget(self, action: #selector(go_to_signup), for: .touchUpInside)
     }
     
@@ -60,12 +60,7 @@ extension LoginViewController {
         performSegue(withIdentifier: "login2signup", sender: self)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        debugPrint("Called")
-        if currUsername != nil {
-            performSegue(withIdentifier: "login2feed", sender: self)
-        }
-    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navVC = segue.destination as? AccountNavController {

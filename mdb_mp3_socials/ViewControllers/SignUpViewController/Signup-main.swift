@@ -10,7 +10,8 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
-
+    var prompt: UILabel!
+    let internal_padding:CGFloat = 50
     
     var fullname_field: UITextField!
     var emailadd_field: UITextField!
@@ -27,7 +28,7 @@ class SignUpViewController: UIViewController {
         initUI()
         connect_buttons()
         
-        //        Utils.printFontFamilies()
+        
         // Do any additional setup after loading the view.
     }
     
