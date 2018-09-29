@@ -60,6 +60,7 @@ extension SignUpViewController {
                                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         fullname_field.layer.cornerRadius = 5
         fullname_field.textAlignment = .center
+        fullname_field.tintColor = .white
         
         
         view.addSubview(fullname_field)
@@ -74,6 +75,7 @@ extension SignUpViewController {
                                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         emailadd_field.layer.cornerRadius = 5
         emailadd_field.textAlignment = .center
+        emailadd_field.tintColor = .white
 
         view.addSubview(emailadd_field)
         
@@ -87,6 +89,7 @@ extension SignUpViewController {
                                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         username_field.layer.cornerRadius = 5
         username_field.textAlignment = .center
+        username_field.tintColor = .white
         view.addSubview(username_field)
         
         
@@ -101,6 +104,7 @@ extension SignUpViewController {
         password_field.layer.cornerRadius = 5
         password_field.isSecureTextEntry = true
         password_field.textAlignment = .center
+        password_field.tintColor = .white
         view.addSubview(password_field)
     }
     

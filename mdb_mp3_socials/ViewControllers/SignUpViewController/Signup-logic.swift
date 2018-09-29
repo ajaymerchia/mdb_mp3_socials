@@ -50,12 +50,12 @@ extension SignUpViewController {
                 self.displayAlert(title: "There was an error", message: "Trying to make you")
                 return
             } else {
-                guard (user?.user.uid) != nil else {
+                guard let uid = user?.user.uid else {
                     return
                 }
                 let ref = Database.database().reference()
                 let userRef = ref.child("users").child(username)
-                let values = ["fullname": name, "email": email, "username": username]
+                let values = ["fullname": name, "email": email]
                 
                 userRef.updateChildValues(values, withCompletionBlock: { (error, ref) in
                     if error != nil {
@@ -69,6 +69,12 @@ extension SignUpViewController {
                         self.dismiss(animated: true, completion: {})
                     }
                 })
+                
+                
+                let dataRef = ref.child("uid_lookup")
+                dataRef.updateChildValues([uid: username])
+                
+                
             }
         })
     }

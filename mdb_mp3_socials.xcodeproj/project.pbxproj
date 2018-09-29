@@ -15,6 +15,7 @@
 		B74309BC215E9E0C004A848E /* Detail-interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74309BB215E9E0C004A848E /* Detail-interest.swift */; };
 		B74309BE215EFA38004A848E /* Login-animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74309BD215EFA38004A848E /* Login-animation.swift */; };
 		B74309C0215F025C004A848E /* Playball-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B74309BF215F0222004A848E /* Playball-Regular.ttf */; };
+		B74309C2215F174D004A848E /* ViewControllerWinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74309C1215F174D004A848E /* ViewControllerWinder.swift */; };
 		B7CD48C8215CDA6E00DB594C /* Login-main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48C7215CDA6E00DB594C /* Login-main.swift */; };
 		B7CD48CC215CDB4000DB594C /* Login-initUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48CB215CDB4000DB594C /* Login-initUI.swift */; };
 		B7CD48CE215CDDF300DB594C /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD48CD215CDDF300DB594C /* utils.swift */; };
@@ -73,6 +74,7 @@
 		B74309BB215E9E0C004A848E /* Detail-interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detail-interest.swift"; sourceTree = "<group>"; };
 		B74309BD215EFA38004A848E /* Login-animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-animation.swift"; sourceTree = "<group>"; };
 		B74309BF215F0222004A848E /* Playball-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Playball-Regular.ttf"; sourceTree = "<group>"; };
+		B74309C1215F174D004A848E /* ViewControllerWinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWinder.swift; sourceTree = "<group>"; };
 		B7CD48C7215CDA6E00DB594C /* Login-main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-main.swift"; sourceTree = "<group>"; };
 		B7CD48CB215CDB4000DB594C /* Login-initUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-initUI.swift"; sourceTree = "<group>"; };
 		B7CD48CD215CDDF300DB594C /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		B7CD48C9215CDA9B00DB594C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B74309C1215F174D004A848E /* ViewControllerWinder.swift */,
 				B7CD48EB215CECF300DB594C /* SignUpViewController */,
 				B7CD48CA215CDAA500DB594C /* LoginViewController */,
 				B7CD48FB215D537E00DB594C /* AccountNavController */,
@@ -575,6 +578,7 @@
 				B7CD48F1215CED5200DB594C /* Signup-initUI.swift in Sources */,
 				B7CD490F215D656600DB594C /* NewSocialViewController.swift in Sources */,
 				B7CD48F5215CF33500DB594C /* Signup-logic.swift in Sources */,
+				B74309C2215F174D004A848E /* ViewControllerWinder.swift in Sources */,
 				B7CD48CE215CDDF300DB594C /* utils.swift in Sources */,
 				B74309BC215E9E0C004A848E /* Detail-interest.swift in Sources */,
 				B7FDED76215DC0480083CF29 /* NewSocial-EventCreate.swift in Sources */,

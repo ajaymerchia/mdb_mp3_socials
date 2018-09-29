@@ -28,12 +28,15 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkForAutoLogin()
         initUI()
         connect_buttons()
         
 //        Utils.printFontFamilies()
     }
     
+    
+   
     
 
 }

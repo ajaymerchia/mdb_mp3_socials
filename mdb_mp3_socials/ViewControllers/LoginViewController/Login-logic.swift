@@ -13,12 +13,11 @@ import FirebaseAuth
 
 extension LoginViewController {
     func connect_buttons() {
-//        login_button.addTarget(self, action: #selector(get_email_login), for: .touchUpInside)
         sign_up_button.addTarget(self, action: #selector(go_to_signup), for: .touchUpInside)
     }
     
     @objc func get_email_login() {
-        guard let username = username_field.text else {
+        guard let username = username_field.text?.lowercased() else {
             return
         }
         let ref = Database.database().reference()
@@ -47,13 +46,35 @@ extension LoginViewController {
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
             if let error = error {
                 print(error)
-//                self.displayAlert(title: "There was an error", message: "Trying to sign you in")
                 return
             } else {
                 self.currUsername = usertext
                 self.performSegue(withIdentifier: "login2feed", sender: self)
             }
         })
+    }
+    
+    
+    
+    func checkForAutoLogin() {
+        
+        if let user = Auth.auth().currentUser {
+            let ref = Database.database().reference()
+            let userRef = ref.child("uid_lookup").child(user.uid)
+            userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                // Get user value
+                let username = snapshot.value as! String
+                
+                debugPrint("Got Username: " + username)
+                self.currUsername = username
+                self.performSegue(withIdentifier: "login2feed", sender: self)
+                // ...
+            }) { (error) in
+                print(error.localizedDescription)
+            }
+            
+            
+        }
     }
     
     @objc func go_to_signup() {
@@ -65,6 +86,13 @@ extension LoginViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navVC = segue.destination as? AccountNavController {
             navVC.logged_in_user = currUsername
+            currUsername = nil
+            
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        username_field.text = ""
+        password_field.text = ""
     }
 }
